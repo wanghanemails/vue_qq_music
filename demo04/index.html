@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div id="app">
+    <table>
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Sex</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr v-for="person in people">
+            <td>{{ person.name  }}</td>
+            <td>{{ person.age  }}</td>
+            <td>{{ person.sex  }}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<script src="../js/vue.js"></script>
+<script>
+     var vm = new Vue(
+             {
+                 el:"#app",
+                 data:{
+                     people:[
+                         {
+                            name:"1",
+                            age:22,
+                            sex:"男"
+                         },
+                         {
+                             name:"3",
+                             age:22,
+                             sex:"女"
+                         },
+                         {
+                             name:"3",
+                             age:22,
+                             sex:"男"
+                         }
+                     ]
+                 }
+
+             }
+     )
+</script>
+</body>
+</html>
